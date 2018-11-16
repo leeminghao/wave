@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2018 The Wave Authors
  * Copyright (c) 2013-2015 Travis Geiselbrecht
  *
  * Permission is hereby granted, free of charge, to any person obtaining
@@ -96,9 +97,9 @@ void lk_main(ulong arg0, ulong arg1, ulong arg2, ulong arg3)
     target_early_init();
 
 #if WITH_SMP
-    dprintf(INFO, "\nwelcome to lk/MP\n\n");
+    dprintf(INFO, "\nWelcome to Wave/MP\n\n");
 #else
-    dprintf(INFO, "\nwelcome to lk\n\n");
+    dprintf(INFO, "\nWelcome to Wave\n\n");
 #endif
     dprintf(INFO, "boot args 0x%lx 0x%lx 0x%lx 0x%lx\n",
             lk_boot_args[0], lk_boot_args[1], lk_boot_args[2], lk_boot_args[3]);
