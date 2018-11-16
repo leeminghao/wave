@@ -8,16 +8,8 @@ The Wave embedded kernel.
 
 1. Install or build qemu. v2.4 and above is recommended.
 [Download QEMU](https://www.qemu.org/download/#source)
-
 2. Install gcc for embedded arm (see note 1)
-
-note 1: for ubuntu:
-```
-sudo apt-get install gcc-arm-none-eabi
-```
-or fetch a prebuilt toolchain from
-http://newos.org/toolchains/arm-eabi-5.3.0-Linux-x86_64.tar.xz
-
+[Download Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
 3. Run scripts/do-qemuarm  (from the wave directory)
 4. You should see 'Welcome to Wave/MP'
 
