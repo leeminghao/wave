@@ -1,3 +1,10 @@
+# Copyright 2018 The Wave Authors
+# Copyright (c) 2008-2015 Travis Geiselbrecht
+#
+# Use of this source code is governed by a MIT-style
+# license that can be found in the LICENSE file or at
+# https://opensource.org/licenses/MIT
+
 # the above include may override LKROOT and LKINC to allow external
 # directories to be included in the build
 -include lk_inc.mk
@@ -28,6 +35,7 @@ export BUILDROOT
 export DEFAULT_PROJECT
 export TOOLCHAIN_PREFIX
 
+$(info $(MAKECMDGOALS))
 # veneer makefile that calls into the engine with lk as the build root
 # if we're the top level invocation, call ourselves with additional args
 _top:

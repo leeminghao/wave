@@ -23,17 +23,19 @@ DO_BLOCK=0
 DO_64BIT=0
 DO_CORTEX_M3=0
 DO_DISPLAY=0
+DO_DEBUG=0
 DO_CMPCTMALLOC=0
 DO_MINIHEAP=0
 SMP=1
 MEMSIZE=512
 SUDO=""
 
-while getopts bdhm:cMnt36s: FLAG; do
+while getopts bdDhm:cMnt36s: FLAG; do
     case $FLAG in
         b) DO_BLOCK=1;;
         c) DO_CMPCTMALLOC=1;;
         d) DO_DISPLAY=1;;
+        D) DO_DEBUG=1;;
         M) DO_MINIHEAP=1;;
         n) DO_NET=1;;
         t) DO_NET_TAP=1;;
@@ -67,6 +69,9 @@ NET_ARGS=" -netdev user,id=vmnic,hostname=qemu -device virtio-net-device,netdev=
 NET_TAP_ARGS=" -netdev tap,id=vmnic -device virtio-net-device,netdev=vmnic"
 NO_DISPLAY_ARGS=" -nographic"
 DISPLAY_ARGS=" -device virtio-gpu-device -serial stdio"
+# -s Shorthand for -gdb tcp::1234, i.e. open a gdbserver on TCP port 1234.
+# -S Do not start CPU at startup
+DEBUG_ARGS=" -s -S"
 
 echo DO_BLOCK = $DO_BLOCK
 echo DO_NET = $DO_NET
@@ -85,6 +90,9 @@ if [ $DO_DISPLAY == 1 ]; then
     ARGS+=$DISPLAY_ARGS
 else
     ARGS+=$NO_DISPLAY_ARGS
+fi
+if [ $DO_DEBUG == 1 ]; then
+    ARGS+=$DEBUG_ARGS
 fi
 
 MAKE_VARS=""
