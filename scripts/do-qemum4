@@ -33,7 +33,7 @@ done
 
 shift $((OPTIND-1))
 
-if [ -z "$QEMUM4" ]; then 
+if [ -z "$QEMUM4" ]; then
     echo "QEMUM4 is not defined. Set QEMUM4='path/to/qemu-m4' inside scripts/toolpaths.local"
     exit 1
 fi

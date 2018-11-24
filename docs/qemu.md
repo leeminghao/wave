@@ -30,6 +30,26 @@ export PATH=$HOME/bin/gcc-arm-none-eabi-7-2018-q2-update/bin:$PATH
 This will get you a interactive prompt into Wave which is running in qemu
 arm machine 'virt' emulation. type 'help' for commands.
 
+## To build and test for ARM-M on linux
+
+1. Install or build pebble qemu.
+[Pebble QEMU](https://github.com/wave-mirror/pebble_qemu)
+
+```
+export QEMUM4=pebble_qemu/arm-softmmu/qemu-system-arm
+```
+
+2. Install gcc for embedded arm-m.
+[Download Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
+
+3. Run scripts/do-qemum4  (from the wave directory)
+
+```
+./scripts/do-qemum4
+```
+
+4. You should see 'Welcome to Wave'
+
 ## Debugging the kernel with GDB
 
 In the shell you're running QEMU in:
