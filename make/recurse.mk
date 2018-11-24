@@ -18,4 +18,3 @@ include $(addsuffix /rules.mk,$(INCMODULES))
 include make/recurse.mk
 
 endif
-

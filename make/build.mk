@@ -59,4 +59,3 @@ $(BUILDDIR)/include_paths.txt: $(OUTELF)
 	$(NOECHO)echo $(subst -I,,$(sort $(GLOBAL_INCLUDES))) | tr ' ' '\n' > $@
 
 #include arch/$(ARCH)/compile.mk
-

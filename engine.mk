@@ -19,7 +19,6 @@ include make/macros.mk
 # that project name specified...
 
 project-name := $(firstword $(MAKECMDGOALS))
-
 ifneq ($(project-name),)
 ifneq ($(strip $(foreach d,$(LKINC),$(wildcard $(d)/project/$(project-name).mk))),)
 do-nothing := 1

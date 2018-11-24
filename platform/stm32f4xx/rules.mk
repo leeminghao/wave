@@ -14,7 +14,7 @@ ARM_CPU := cortex-m4
 
 # TODO: integrate better with platform/stm32f4xx/CMSIS/stm32f4xx.h
 ifeq ($(STM32_CHIP),stm32f407)
-GLOBAL_DEFINES += STM32F40_41xxx 
+GLOBAL_DEFINES += STM32F40_41xxx
 FOUND_CHIP := true
 endif
 ifeq ($(STM32_CHIP),stm32f417)
@@ -38,9 +38,9 @@ MODULE_SRCS += \
 	$(LOCAL_DIR)/uart.c \
 	$(LOCAL_DIR)/flash.c
 
-# use a two segment memory layout, where all of the read-only sections 
-# of the binary reside in rom, and the read/write are in memory. The 
-# ROMBASE, MEMBASE, and MEMSIZE make variables are required to be set 
+# use a two segment memory layout, where all of the read-only sections
+# of the binary reside in rom, and the read/write are in memory. The
+# ROMBASE, MEMBASE, and MEMSIZE make variables are required to be set
 # for the linker script to be generated properly.
 #
 LINKER_SCRIPT += \

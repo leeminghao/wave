@@ -49,4 +49,3 @@ void kernel_init(void)
     dprintf(SPEW, "initializing ports\n");
     port_init();
 }
-

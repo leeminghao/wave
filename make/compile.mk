@@ -1,4 +1,3 @@
-
 # create a separate list of objects per source type
 MODULE_CSRCS := $(filter %.c,$(MODULE_SRCS))
 MODULE_CPPSRCS := $(filter %.cpp,$(MODULE_SRCS))
@@ -94,4 +93,3 @@ MODULE_ASMOBJS :=
 
 # MODULE_OBJS is passed back
 #MODULE_OBJS :=
-
