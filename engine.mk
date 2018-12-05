@@ -71,6 +71,7 @@ ARCH_COMPILEFLAGS :=
 ARCH_CFLAGS :=
 ARCH_CPPFLAGS :=
 ARCH_ASMFLAGS :=
+ARCH_LDFLAGS :=
 
 # top level rule
 all:: $(OUTBIN) $(OUTELF).lst $(OUTELF).debug.lst $(OUTELF).sym $(OUTELF).sym.sorted $(OUTELF).size $(OUTELF).dump $(BUILDDIR)/srcfiles.txt $(BUILDDIR)/include_paths.txt
@@ -219,6 +220,7 @@ GLOBAL_DEFINES += ARCH_COMPILEFLAGS=\"$(subst $(SPACE),_,$(ARCH_COMPILEFLAGS))\"
 GLOBAL_DEFINES += ARCH_CFLAGS=\"$(subst $(SPACE),_,$(ARCH_CFLAGS))\"
 GLOBAL_DEFINES += ARCH_CPPFLAGS=\"$(subst $(SPACE),_,$(ARCH_CPPFLAGS))\"
 GLOBAL_DEFINES += ARCH_ASMFLAGS=\"$(subst $(SPACE),_,$(ARCH_ASMFLAGS))\"
+GLOBAL_DEFINES += ARCH_LDFLAGS=\"$(subst $(SPACE),_,$(ARCH_LDFLAGS))\"
 
 ifneq ($(OBJS),)
 $(warning OBJS=$(OBJS))
