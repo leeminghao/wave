@@ -38,7 +38,7 @@ export TOOLCHAIN_PREFIX
 # veneer makefile that calls into the engine with lk as the build root
 # if we're the top level invocation, call ourselves with additional args
 _top:
-	@$(MAKE) -C $(LKMAKEROOT) -rR -f $(LKROOT)/engine.mk $(addprefix -I,$(LKINC)) $(MAKECMDGOALS)
+	@$(MAKE) -C $(LKMAKEROOT) -rR -f $(LKROOT)/make/engine.mk $(addprefix -I,$(LKINC)) $(MAKECMDGOALS)
 
 # If any arguments were provided, create a recipe for them that depends
 # on the _top rule (thus calling it), but otherwise do nothing.
