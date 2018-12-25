@@ -8,6 +8,14 @@ prebuilt binaries, or built locally.
 1. Install or build qemu. v2.4 and above is recommended.
 [Download QEMU](https://www.qemu.org/download/#source)
 
+### Dependencies
+
+On Ubuntu:
+
+```
+sudo apt install libpixman-1-dev
+```
+
 2. Install gcc for embedded arm.
 [Download Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
 
